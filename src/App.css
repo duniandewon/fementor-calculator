@@ -1,0 +1,201 @@
+.calculator {
+  padding: 1rem 2rem;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 624px;
+  margin: 0 auto;
+}
+
+.calculator__logo {
+  font-size: 3rem;
+}
+
+.calculator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator__display {
+  background-color: var(--clr-bg-800);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.calculator__btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background-color: var(--clr-bg-900);
+  border-radius: 10px;
+}
+
+.btn {
+  border: 0;
+  cursor: pointer;
+  background-color: var(--clr-key-200);
+  border-radius: 10px;
+  color: var(--clr-text-800);
+  text-transform: uppercase;
+  box-shadow: 0px 4px 2px 0px var(--clr-key-300);
+}
+
+.btn:active {
+  transform: scale(0.92);
+  box-shadow: 0px 3px 2px 0px var(--clr-key-300);
+}
+
+.btn.primary {
+  background-color: var(--clr-key-600);
+  box-shadow: 0px 4px 2px 0px var(--clr-key-700);
+  color: var(--clr-text-100);
+}
+
+.btn.primary:active {
+  box-shadow: 0px 3px 2px 0px var(--clr-key-700);
+}
+
+.btn.danger {
+  background-color: var(--clr-key-400);
+  box-shadow: 0px 4px 2px 0px var(--clr-key-500);
+  color: var(--clr-text-100);
+}
+
+.btn.danger:active {
+  box-shadow: 0px 3px 2px 0px var(--clr-key-500);
+}
+
+.theme-switcher fieldset {
+  border: 0;
+  display: flex;
+}
+
+.theme-switcher p {
+  align-self: flex-end;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+
+.theme-switcher legend {
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.switcher label {
+  cursor: pointer;
+  font-size: 1rem;
+}
+.switcher__keys,
+.switcher__labels {
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.switcher__labels {
+  padding: 0 1rem;
+}
+
+.switcher__keys {
+  grid-column: span 3;
+  background-color: var(--clr-bg-900);
+  border-radius: 20px;
+  padding: 0.4rem;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--clr-key-400);
+  outline: 1px solid var(--clr-key-500);
+}
+
+#btn-plus,
+#btn-minus,
+#btn-multiply {
+  grid-column: 4;
+}
+
+#btn-plus {
+  grid-row: 2;
+}
+
+#btn-minus {
+  grid-row: 3;
+}
+
+#btn-multiply {
+  grid-row: 4;
+}
+
+#btn-devide {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+#btn-dell {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#btn-point {
+  grid-row: 4;
+}
+
+#btn-0 {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#btn-reset,
+#btn-equal {
+  grid-row: 5;
+  grid-column: span 2;
+}
+
+:root:has(#theme-2:checked) {
+  --clr-bg-900: hsl(0, 5%, 81%); /* toggle background, keypad background */
+  --clr-bg-800: hsl(0, 0%, 93%); /* screen background */
+  --clr-bg-700: hsl(0, 0%, 90%); /* main backgorung */
+
+  --clr-key-700: hsl(185, 58%, 25%); /* key shadow (dell & reset) */
+  --clr-key-600: hsl(185, 42%, 37%); /* key background (dell & reset) */
+
+  --clr-key-500: hsl(25, 99%, 27%); /* key shadow */
+  --clr-key-400: hsl(25, 98%, 40%); /* key background, toggle */
+
+  --clr-key-300: hsl(35, 11%, 61%); /* key shadow (numbers) */
+  --clr-key-200: hsl(45, 7%, 89%); /* key background (numbers) */
+
+  --clr-text-800: hsl(60, 10%, 19%);
+}
+
+:root:has(#theme-3:checked) {
+  --clr-bg-900: hsl(268, 71%, 12%); /* toggle background, keypad background */
+  --clr-bg-800: hsl(268, 71%, 12%); /* screen background */
+  --clr-bg-700: hsl(268, 75%, 9%); /* main backgorung */
+
+  --clr-key-700: hsl(285, 91%, 52%); /* key shadow (dell & reset) */
+  --clr-key-600: hsl(281, 89%, 26%); /* key background (dell & reset) */
+
+  --clr-key-500: hsl(177, 92%, 70%); /* key shadow */
+  --clr-key-400: hsl(176, 100%, 44%); /* key background, toggle */
+
+  --clr-key-300: hsl(290, 70%, 36%); /* key shadow (numbers) */
+  --clr-key-200: hsl(268, 47%, 21%); /* key background (numbers) */
+
+  --clr-text-800: hsl(52, 100%, 62%);
+}
