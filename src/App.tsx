@@ -2,7 +2,6 @@ import { ThemeProvider } from "styled-components";
 
 import theme from "./theme";
 
-import "./App.css";
 import Calculator from "./components/Calculator";
 
 function App() {

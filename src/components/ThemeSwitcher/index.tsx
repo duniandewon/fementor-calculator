@@ -17,6 +17,7 @@ const ThemeSwitcher = () => {
         <Keys>
           {themes.map((th) => (
             <Key
+              key={th}
               type="radio"
               name="theme-switcher"
               id={`theme-${th}`}

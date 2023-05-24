@@ -13,7 +13,7 @@ const Keypad = () => {
       ].map((operation) => (
         <Button
           key={operation.id}
-          gridArea={operation.id}
+          gridarea={operation.id}
           id={`btn-${operation.id}`}
           // onClick={() => handleClickOperation(operation.label)}
         >
@@ -23,7 +23,7 @@ const Keypad = () => {
       {["7", "8", "9", "4", "5", "6", "1", "2", "3", "0"].map((num) => (
         <Button
           key={num}
-          gridArea={`num-${num}`}
+          gridarea={`num-${num}`}
           id={`btn-${num}`}
           // onClick={() => handleClickNum(num)}
         >
@@ -31,31 +31,31 @@ const Keypad = () => {
         </Button>
       ))}
       <Button
-        gridArea="point"
+        gridarea="point"
         id="btn-point"
         // onClick={() => !num1.includes(".") && handleClickNum(".")}
       >
         .
       </Button>
       <Button
-        primary
-        gridArea="reset"
+        $primary
+        gridarea="reset"
         id="btn-reset"
         // onClick={handleClickReset}
       >
         reset
       </Button>
       <Button
-        primary
-        gridArea="del"
+        $primary
+        gridarea="del"
         id="btn-dell"
         // onClick={handleClicDel}
       >
         del
       </Button>
       <Button
-        danger
-        gridArea="equal"
+        $danger
+        gridarea="equal"
         id="btn-equal"
         // onClick={handleClickCalculate}
       >
