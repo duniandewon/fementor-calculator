@@ -1,10 +1,13 @@
+import { useTheme } from "../../hooks/useTheme";
 import Button from "../Button";
 
 import { Container } from "./styled";
 
 const Keypad = () => {
+  const { theme } = useTheme();
+
   return (
-    <Container>
+    <Container currenttheme={theme}>
       {[
         { label: "+", id: "plus" },
         { label: "-", id: "minus" },
@@ -13,6 +16,7 @@ const Keypad = () => {
       ].map((operation) => (
         <Button
           key={operation.id}
+          currenttheme={theme}
           gridarea={operation.id}
           id={`btn-${operation.id}`}
           // onClick={() => handleClickOperation(operation.label)}
@@ -23,6 +27,7 @@ const Keypad = () => {
       {["7", "8", "9", "4", "5", "6", "1", "2", "3", "0"].map((num) => (
         <Button
           key={num}
+          currenttheme={theme}
           gridarea={`num-${num}`}
           id={`btn-${num}`}
           // onClick={() => handleClickNum(num)}
@@ -31,6 +36,7 @@ const Keypad = () => {
         </Button>
       ))}
       <Button
+        currenttheme={theme}
         gridarea="point"
         id="btn-point"
         // onClick={() => !num1.includes(".") && handleClickNum(".")}
@@ -39,6 +45,7 @@ const Keypad = () => {
       </Button>
       <Button
         $primary
+        currenttheme={theme}
         gridarea="reset"
         id="btn-reset"
         // onClick={handleClickReset}
@@ -47,6 +54,7 @@ const Keypad = () => {
       </Button>
       <Button
         $primary
+        currenttheme={theme}
         gridarea="del"
         id="btn-dell"
         // onClick={handleClicDel}
@@ -55,6 +63,7 @@ const Keypad = () => {
       </Button>
       <Button
         $danger
+        currenttheme={theme}
         gridarea="equal"
         id="btn-equal"
         // onClick={handleClickCalculate}

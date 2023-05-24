@@ -1,7 +1,10 @@
+import { useTheme } from "../../hooks/useTheme";
 import { Container } from "./styled";
 
 const Screen = () => {
-  return <Container>0</Container>;
+  const { theme } = useTheme();
+
+  return <Container currenttheme={theme}>0</Container>;
 };
 
 export default Screen;

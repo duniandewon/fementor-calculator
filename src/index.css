@@ -1,25 +1,6 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 
-/* Custom Propeties */
-
-:root {
-  --clr-bg-900: hsl(223, 31%, 20%); /* toggle background, keypad background */
-  --clr-bg-800: hsl(224, 36%, 15%); /* screen background */
-  --clr-bg-700: hsl(222, 26%, 31%); /* main backgorung */
-
-  --clr-key-700: hsl(224, 28%, 35%); /* key shadow (dell & reset) */
-  --clr-key-600: hsl(225, 21%, 49%); /* key background (dell & reset) */
-
-  --clr-key-500: hsl(6, 70%, 34%); /* key shadow */
-  --clr-key-400: hsl(6, 63%, 50%); /* key background, toggle */
-  --clr-key-300: hsl(28, 16%, 65%); /* key shadow (numbers) */
-  --clr-key-200: hsl(30, 25%, 89%); /* key background (numbers) */
-
-  --clr-text-800: hsl(221, 14%, 31%);
-  --clr-text-100: hsl(0, 0%, 100%);
-}
-
 /* CSS Reset */
 
 *,
@@ -69,23 +50,4 @@ h6 {
 
 #app {
   isolation: isolate;
-}
-
-/* Global Styles */
-
-body {
-  background-color: var(--clr-bg-700);
-  color: var(--clr-text-100);
-  font-family: "League Spartan", sans-serif;
-  font-size: 2rem;
-  line-height: 1.5;
-}
-
-body:has(#theme-2:checked),
-body:has(#theme-3:checked) {
-  color: var(--clr-text-800);
-}
-
-body:has(#theme-3:checked) .btn.danger {
-  color: hsl(198, 20%, 13%);
 }
