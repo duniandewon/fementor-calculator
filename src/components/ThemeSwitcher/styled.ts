@@ -1,5 +1,9 @@
 import { styled } from "styled-components";
 
+interface Props {
+  currenttheme: string;
+}
+
 export const Container = styled.div`
   display: flex;
 
@@ -28,14 +32,14 @@ export const Labels = styled(KeysAndLabels)`
   padding: 0 1rem;
 `;
 
-export const Keys = styled(KeysAndLabels)`
+export const Keys = styled(KeysAndLabels)<Props>`
   grid-column: span 3;
-  background-color: ${({theme}) => theme.dark.bg[900]};
+  background-color: ${({ theme, currenttheme }) => theme[currenttheme].bg[900]};
   border-radius: 20px;
   padding: 0.4rem;
 `;
 
-export const Key = styled.input`
+export const Key = styled.input<Props>`
   appearance: none;
   width: 1.2rem;
   height: 1.2rem;
@@ -43,7 +47,9 @@ export const Key = styled.input`
   cursor: pointer;
 
   &:checked {
-    background-color: ${({theme}) => theme.dark.key[400]};
-    outline: 1px solid ${({theme}) => theme.dark.key[500]};
+    background-color: ${({ theme, currenttheme }) =>
+      theme[currenttheme].key[400]};
+    outline: 1px solid
+      ${({ theme, currenttheme }) => theme[currenttheme].key[500]};
   }
 `;

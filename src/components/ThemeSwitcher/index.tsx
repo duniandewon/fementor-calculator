@@ -8,6 +8,7 @@ import { useTheme } from "../../hooks/useTheme";
 
 const ThemeSwitcher = () => {
   const themes = ["dark", "light", "purple"];
+
   const { theme, setTheme } = useTheme();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -25,9 +26,10 @@ const ThemeSwitcher = () => {
             </Label>
           ))}
         </Labels>
-        <Keys>
+        <Keys currenttheme={theme}>
           {themes.map((th) => (
             <Key
+              currenttheme={theme}
               key={th}
               type="radio"
               name="theme-switcher"
